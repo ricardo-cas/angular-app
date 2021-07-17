@@ -88,7 +88,7 @@ O Seletor não necessáriamente precisa ser uma tag, você pode utiliza-lo como 
 
 ## Gerando componentes
 
-Para gerar um compoennte podemos utilizar o comando ng, conforme exemplo:
+Para gerar um componente podemos utilizar o comando ng, conforme exemplo:
 
 ```Typescript
 
@@ -111,5 +111,37 @@ Podemos também especificar uma pasta onde o componente será criado
 ```Typescript
 
 ng g c <nome_da_pasta>/<nome_do_componente>
+
+```
+
+## Interpolação de Strings (string interpolation)
+
+Está relacionado a como, a partir do template, a gente consegue acessar um determinado dado, variável ou classe que está declarado dentro do componente.
+
+Quando você cria o primeiro aplicativo com o [Angular CLI](https://angular.io/cli) ele já vem carregado com o primeiro exemplo que utiliza o String Interpolation, que é no arquivo **app.component.html**, conforme abaixo ele está referenciando no html um nome de atributo dentro das chaves {{}}.
+
+Esse atributo está referenciado dentro da classe **app.component.ts**, conforme abaixo, então na hora de renderizar a página a variável **title** será trasnformada para string à qual ela foi definida.
+
+### Resumo
+
+Dentro das chaves, você vai colocar uma expressão que será interpretada pelo Javascript que vai retornar um resultado e assim será transformado para string.
+
+```Typescript
+     //app.component.html
+    <span>{{ title }} app is running!</span>
+```
+
+```Typescript
+     //app.component.ts
+    import { Component } from '@angular/core';
+
+    @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
+    })
+    export class AppComponent {
+    title = 'angular-app';
+    }
 
 ```

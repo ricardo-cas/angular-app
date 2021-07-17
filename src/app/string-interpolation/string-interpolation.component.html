@@ -1,0 +1,22 @@
+<section>
+	<p>Passando as informações do atributo definida na classe:</p>
+	<p>{{ firstname }}</p>
+</section>
+
+<section>
+	<p>Acessando informações de objetos definidos na classe:</p>
+	<p>Nome da pessoa: {{ person.firstname }}</p>
+	<p>Último nome da pessoa: {{ person.lastname }}</p>
+	<p>Idade: {{ person.age }}</p>
+</section>
+
+<section>
+	<h2>
+		Com o String Interpolation ele também pode resolver expressões dentro da
+		sintaxe dele, o resultado será exibido como uma string:
+	</h2>
+	<p>
+		Neste paragrafo ele irá fazer a conta de 100 + 100 e exibirá o resultado:
+		{{ 100 + 100 }}
+	</p>
+</section>
