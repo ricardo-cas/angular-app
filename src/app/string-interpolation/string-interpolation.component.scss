@@ -9,3 +9,10 @@ h2 {
 	font-family: "JetBrains Mono";
 	font-weight: 800;
 }
+
+.example-card {
+	max-width: 400px;
+	// max-width: 100vh;
+	justify-content: center;
+	align-items: center;
+}
